@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlugaJá - Manutenção e Despesas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 20px;
+            padding-top: 80px;
+        }
+
+        .header {
+            display: flex;
+            padding: 10px 20px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #052c52;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 3px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .menu-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .button-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .search input {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        main {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="https://img.icons8.com/?size=100&id=261&format=png&color=000000" alt="Ícone" class="logo-icon">
+                <span>aluga já</span>
+            </div>
+            <nav class="menu">
+                <button id="consultar-button" class="menu-button">
+                    <img src="https://img.icons8.com/?size=100&id=85786&format=png&color=000000" alt="Despesas" class="button-icon">
+                    Consultar cadastros
+                    <div id="consultar-dropdown" class="dropdown-menu">
+                        <ul>
+                            <li><a href="../clientes cadastrados/index.html">Clientes</a></li>
+                            <li><a href="../veiculos cadastrados/index.html">Veículos</a></li>
+                            <li><a href="../entradas cadastradas/index.html">Entradas</a></li>
+                            <li><a href="#">Despesas</a></li>
+                        </ul>
+                    </div>
+                </button>                
+                <a href="../manutenções/index.html">
+                    <button class="menu-button">
+                        <img src="https://img.icons8.com/?size=100&id=11151&format=png&color=000000" alt="Manutenção" class="button-icon">
+                        Manutenção
+                    </button>
+                </a>
+                <button id="cadastros-button" class="menu-button">
+                    <img src="https://img.icons8.com/?size=100&id=t5GRNS5yIsHP&format=png&color=000000" alt="Cadastro" class="button-icon">
+                    Cadastro
+                    <div id="dropdown" class="dropdown-menu">
+                        <ul>
+                            <li><a href="../clientes/index.html">Cliente</a></li>
+                            <a href="../veiculos/index.html">Veículo</a>
+                            <li><a href="../entradas/index.html">Entradas</a></li>
+                            <li><a href="../despesas/index.html">Despesas</a></li>
+                        </ul>
+                    </div>
+                </button>
+            </nav>
+            <div class="search">
+                <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=000000" alt="Ícone de pesquisa" class="search-icon">
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+
+            <a href="../institucional/index.html" class="home-button">
+                <img src="https://img.icons8.com/?size=100&id=2797&format=png&color=000000" alt="Casa" class="button-icon">
+            </a>            
+
+        </header>
+
+        <main>
+            <section class="dashboard">
+                <div class="card" id="clientes-card">
+                    <h2>Total de Clientes</h2>
+                    <p id="clientes-count">...</p>
+                </div>
+                <div class="card" id="veiculos-card">
+                    <h2>Total de Veículos</h2>
+                    <p id="veiculos-count">...</p>
+                </div>
+            </section>
+        
+            <!-- Últimos 5 Clientes e Veículos -->
+            <section class="dashboard">
+                <div class="card" id="clientes-recent-card">
+                    <h2>Últimos 5 Clientes</h2>
+                    <ul id="clientes-list">
+                      
+                    </ul>
+                </div>
+                <div class="card" id="veiculos-recent-card">
+                    <h2>Últimos 5 Veículos</h2>
+                    <ul id="veiculos-list">
+                        <!-- Os veículos serão adicionados aqui via JavaScript -->
+                    </ul>
+                </div>
+                <div class="card" id="chart-card">
+                    <canvas id="dashboard-chart"></canvas>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 AlugaJá - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Correção: Fechar a tag <script> para o Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Inclusão correta do Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Seu script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.background-image {
+    width: 100%; /* Ajusta a largura */
+    background-image: url('loc.png'); /* Substitua pela URL da sua imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+
+
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #eeeeee;
+    color: #052c52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 20px;
+    padding-top: 80px;
+}
+
+/* Header e Menu */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 15px 20px;
+    background-color: #052c52;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.menu-button {
+    background-color: #ffffff;
+    color: #052c52;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.button-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+/* Campo de Busca */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+}
+
+.search input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 220px;
+    outline: none;
+    transition: width 0.4s ease;
+}
+
+.search input:focus {
+    width: 260px;
+}
+
+/* Estilo do botão de alternância */
+.theme-toggle-button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Tema claro */
+body.light-mode {
+    background-color: #eeeeee;
+    color: #000000;
+}

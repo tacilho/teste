@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlugaJá - Manutenção e Despesas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 20px;
+            padding-top: 80px;
+        }
+
+        .header {
+            display: flex;
+            padding: 10px 20px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #052c52;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 3px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .menu-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .button-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .search input {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        main {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="https://img.icons8.com/?size=100&id=261&format=png&color=000000" alt="Ícone" class="logo-icon">
+                <span>aluga já</span>
+            </div>
+            <nav class="menu">
+                <button id="consultar-button" class="menu-button">
+                    <img src="https://img.icons8.com/?size=100&id=85786&format=png&color=000000" alt="Despesas" class="button-icon">
+                    Consultar cadastros
+                    <div id="consultar-dropdown" class="dropdown-menu">
+                        <ul>
+                            <li><a href="../clientes cadastrados/index.html">Clientes</a></li>
+                            <li><a href="../veiculos cadastrados/index.html">Veículos</a></li>
+                            <li><a href="../entradas cadastradas/index.html">Entradas</a></li>
+                            <li><a href="#">Despesas</a></li>
+                        </ul>
+                    </div>
+                </button>                
+                <a href="../manutenções/index.html">
+                    <button class="menu-button">
+                        <img src="https://img.icons8.com/?size=100&id=11151&format=png&color=000000" alt="Manutenção" class="button-icon">
+                        Manutenção
+                    </button>
+                </a>
+                <button id="cadastros-button" class="menu-button">
+                    <img src="https://img.icons8.com/?size=100&id=t5GRNS5yIsHP&format=png&color=000000" alt="Cadastro" class="button-icon">
+                    Cadastro
+                    <div id="dropdown" class="dropdown-menu">
+                        <ul>
+                            <li><a href="../clientes/index.html">Cliente</a></li>
+                            <a href="../veiculos/index.html">Veículo</a>
+                            <li><a href="../entradas/index.html">Entradas</a></li>
+                            <li><a href="../despesas/index.html">Despesas</a></li>
+                        </ul>
+                    </div>
+                </button>
+            </nav>
+            <div class="search">
+                <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=000000" alt="Ícone de pesquisa" class="search-icon">
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+
+            <a href="../institucional/index.html" class="home-button">
+                <img src="https://img.icons8.com/?size=100&id=2797&format=png&color=000000" alt="Casa" class="button-icon">
+            </a>            
+
+        </header>
+        
+        <section class="form-section">
+            <form id="veiculoForm">
+                <!-- Informações básicas -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="apelido">Apelido da moto</label>
+                        <input type="text" id="apelidoMoto" name="apelidoMoto">
+                    </div>
+                    <div class="form-group">
+                        <label for="placa">Placa da moto</label>
+                        <input type="text" id="placa" name="placa" maxlength="8" required>
+                    </div>
+                </div>
+        
+                <!-- Informações do modelo e características -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <select id="marca" name="marca" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="honda">Honda</option>
+                            <option value="yamaha">Yamaha</option>
+                            <option value="suzuki">Suzuki</option>
+                            <!-- Outras marcas -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo" name="modelo" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ano">Ano de fabricação</label>
+                        <input type="text" id="anoFabricacao" name="anoFabricacao">
+                    </div>
+                    <div class="form-group">
+                        <label for="cor">Cor (conforme consta no documento)</label>
+                        <input type="text" id="cor" name="cor" required>
+                    </div>
+                </div>
+        
+                <!-- Informações de contrato e status -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status" name="status" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                            <option value="manutencao">Em manutenção</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente">Cliente associado</label>
+                        <select id="cliente" name="cliente">
+                            <option value="" disabled selected>Selecione um cliente</option>
+
+                        </select>
+                    </div>
+                </div>
+        
+                <!-- Informações de seguro -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="seguro">Seguro</label>
+                        <select id="seguro" name="seguro" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vencimentoSeguro">Vencimento do seguro</label>
+                        <input type="date" id="vencimentoSeguro" name="vencimentoSeguro" required>
+                    </div>
+                </div>
+        
+                <!-- Informações financeiras -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parcela">Parcela do veículo</label>
+                        <input type="number" id="parcelaVeiculo" name="parcelaVeiculo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="valorSeguro">Valor do seguro</label>
+                        <input type="number" id="valorSeguro" name="valorSeguro" required>
+                    </div>
+                </div>
+        
+                <!-- Informações de manutenção -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="manutencao">Manutenção associada</label>
+                        <select id="manutencao" name="manutencao" required>
+                            <option value="" disabled selected>Selecione uma manutenção</option>
+                            <option value="manutencao1">Troca de óleo</option>
+                            <option value="manutencao2">Revisão de pneus</option>
+                            <option value="manutencao3">Troca de bateria</option>
+                            <!-- Outras manutenções cadastradas -->
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="upload-section">
+                    <label for="documentoVeiculo" class="upload-label">Clique aqui para enviar o documento do veículo</label>
+                    <input type="file" id="documentoVeiculo" name="documentoVeiculo" accept="application/pdf,.doc,.docx,.txt" required>
+                </div>                
+        
+                <!-- Observações -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="observacoes">Observações</label>
+                        <textarea id="observacoes" name="observacoes"></textarea>
+                    </div>
+                </div>
+        
+                <div style="display: flex; gap: 10px;">
+                    <button id="save-button" class="menu-button">Salvar</button>
+                    <button id="save-and-back-button" class="menu-button" type="button">Salvar e Voltar</button>
+                </div>
+            </form>
+        </section>        
+        
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 AlugaJá - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

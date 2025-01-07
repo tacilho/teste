@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlugaJá - Manutenção e Despesas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="https://img.icons8.com/?size=100&id=261&format=png&color=000000" alt="Ícone" class="logo-icon">
+                <span>aluga já</span>
+            </div>
+            <nav class="menu">
+                <a href="../tela de login/index.html" class="menu-button">
+                    Portal do Parceiro
+                <a href="../institucional/cadastro franquiado/index.html" class="menu-button">
+                    <img src="https://img.icons8.com/?size=100&id=t5GRNS5yIsHP&format=png&color=000000" alt="Cadastro" class="button-icon">
+                    Faça seu cadastro
+                </a>                
+                <div id="dropdown" style="display: none;">
+                    <ul>
+                        <li><a href="file:///C:/Users/tiago/OneDrive/Documentos/Gabriel%20Otacilio/clientes/index.html" target="_blank">Cliente</a></li>
+                        <li><a href="#">Veículo</a></li>
+                        <li><a href="file:///C:/Users/tiago/OneDrive/Documentos/Gabriel%20Otacilio/manutenção/index.html" target="_blank">Manutenção</a></li>
+                        <li><a href="file:///C:/Users/tiago/OneDrive/Documentos/Gabriel%20Otacilio/despesas/index.html">Despesa</a></li>
+                    </ul>
+                </div>      
+            </nav>
+            <div>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <span class="ball"></span>
+                </label>
+              </div>
+            
+        </header>
+        
+        <div class="spacer"></div>
+        
+        <main>
+
+            <section id="about" class="about-section">
+                <h2>Sobre a AlugaJá</h2>
+                <p>
+                    Fundada em 2015, a AlugaJá surgiu com a missão de oferecer uma solução acessível e prática para o transporte urbano. Inicialmente, a empresa começou com apenas cinco motos em uma pequena garagem, atendendo alguns poucos clientes locais. Com o tempo e o compromisso com a qualidade, a AlugaJá expandiu-se para várias cidades brasileiras, permitindo que qualquer pessoa possa usufruir de um transporte prático e sem burocracias.
+                </p>
+                <p>
+                    Nosso diferencial é o atendimento personalizado e o foco nas necessidades dos clientes. Com uma equipe treinada e uma frota de motos sempre bem cuidadas, garantimos um serviço de confiança e segurança para quem quer mobilidade sem complicação. A AlugaJá está sempre inovando e se adaptando às novas necessidades do mercado, e nosso foco é transformar o aluguel de motos em uma experiência simples, ágil e acessível a todos.
+                </p>
+            
+                <a href="/cadastro" class="btn-cadastro">Alugue agora mesmo!</a>
+            </section>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="banner1.png" style="width:100%">
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="banner2.png" style="width:100%">
+                </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <!-- The dots/circles -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+
+        <section id="stats" class="stats-section">
+            <div class="stat">
+                <h2 id="bikesRented">0</h2>
+                <p>Motos Alugadas</p>
+            </div>
+            <div class="stat">
+                <h2 id="clientsServed">0</h2>
+                <p>Clientes Atendidos</p>
+            </div>
+        </section>
+
+            <section id="services" class="services-section">
+                <h2>Benefícios do Aluguel</h2>
+                <div class="services-container">
+
+                    
+                    <div class="service-card">
+                        <img src="https://img.icons8.com/ios/50/000000/lock.png" alt="Seguro" class="service-icon">
+                        <h3>Seguro Total</h3>
+                        <p>Seguro contra roubo, furto, colisão e perda total. Rode tranquilo com nossa cobertura completa.</p>
+                    </div>
+            
+                    <div class="service-card">
+                        <img src="https://img.icons8.com/ios/50/000000/gear.png" alt="Manutenção" class="service-icon">
+                        <h3>Manutenção Preventiva</h3>
+                        <p>A manutenção preventiva e corretiva por desgaste natural de uso é por nossa conta. Mantenha sua moto em ótimo estado!</p>
+                    </div>
+            
+                    <div class="service-card">
+                        <img src="https://img.icons8.com/ios/50/000000/car.png" alt="Quilometragem Livre" class="service-icon">
+                        <h3>Quilometragem Livre</h3>
+                        <p>Rode o quanto quiser, nossas motos não têm limite de quilometragem. Aproveite ao máximo!</p>
+                    </div>
+            
+                    <div class="service-card">
+                        <img src="https://img.icons8.com/ios/50/000000/maintenance.png" alt="Manutenção" class="service-icon">
+                        <h3>Manutenção Inclusa</h3>
+                        <p>Manutenção total inclusa em todos os planos, exceto a troca de óleo a cada 1.000 km rodados.</p>
+                    </div>
+            
+                    <div class="service-card">
+                        <img src="https://img.icons8.com/ios/50/000000/motorcycle.png" alt="Modelos de Motos" class="service-icon">
+                        <h3>Modelos de Motos</h3>
+                        <p>As motos disponíveis para aluguel são do modelo Yamaha/Honda 125cc e 150/160cc.</p>
+                    </div>
+                    <a href="/cadastro" class="btn-cadastro2">Alugue agora mesmo com quem você confia!</a>
+            
+
+            <section id="how-it-works" class="info-section">
+                <h2>Como Funciona?</h2>
+                <div class="info-container">
+                
+                    
+                    <!-- Card de Processo de Locação -->
+                    <div class="info-card">
+                        <h3>1. Processo de Locação</h3>
+                        <p>1. Escolha o plano de locação que melhor se adapta às suas necessidades.</p>
+                        <p>2. Selecione o tempo de contrato desejado.</p>
+                        <p>3. Realize seu cadastro e reserva. Nossa equipe entrará em contato logo em seguida para dar continuidade.</p>
+                        <p><strong>Pagamentos:</strong> Semanais, facilitando o acompanhamento e controle dos custos.</p>
+                    </div>
+            
+                    <!-- Card de Retirada da Moto -->
+                    <div class="info-card">
+                        <h3>2. Para Retirar a Moto</h3>
+                        <p>1. Efetue o pagamento da primeira semana de aluguel.</p>
+                        <p>2. Realize o pagamento do caução.</p>
+                        <p><strong>Facilidade no Caução:</strong> Pode ser parcelado em até 2x no boleto semanal ou em até 12x no cartão.</p>
+                    </div>
+            
+                </div>
+            </section>
+
+            <section id="plans" class="plans-section">
+                <h2>Nossos Planos</h2>
+                <div class="plans-container">
+            
+                    <div class="plan-card">
+                        <h3>Plano Master - Yamaha 150cc</h3>
+                        <img src="moto1.png" alt="Yamaha150cc" class="plan-image">
+                        <p>Ideal para quem busca flexibilidade de prazo e custo.</p>
+                        <p><strong>Caução:</strong> R$ 700,00</p>
+                        <p><strong>Valores Semanais:</strong></p>
+                        <p>30 dias: R$ 329,00 / semana</p>
+                        <p>90 dias: R$ 299,00 / semana</p>
+                        <p>180 dias: R$ 289,00 / semana</p>
+                        <button>Alugar agora</button>
+                    </div>
+            
+                    <div class="plan-card">
+                        <h3>Plano Plus - Honda 160cc</h3>
+                        <img src="moto2.png" alt="Honda 160cc" class="plan-image">
+                        <p>Moto potente com ótimo custo-benefício.</p>
+                        <p><strong>Caução:</strong> R$ 700,00</p>
+                        <p><strong>Valores Semanais:</strong></p>
+                        <p>30 dias: R$ 329,00 / semana</p>
+                        <p>90 dias: R$ 299,00 / semana</p>
+                        <p>180 dias: R$ 289,00 / semana</p>
+                        <button>Alugar agora</button>
+                    </div>
+            
+                    <div class="plan-card">
+                        <h3>Plano Minha Moto - Honda/Yamaha</h3>
+                        <img src="moto3.png" alt="Honda/Yamaha" class="plan-image">
+                        <p>Aluguel de 26 meses</p>
+                        <p><strong>Caução:</strong> R$ 799,00</p>
+                        <p><strong>Valor Semanal - Yamaha 150cc:</strong> R$ 359,00</p>
+                        <p><strong>Valor Semanal - Honda 160cc:</strong> R$ 389,00</p>
+                        <p>A moto é sua ao final do plano!</p>
+                        <button>Alugar agora</button>
+                    </div>
+            
+                </div>
+            </section>
+
+            <section id="faq" class="faq-section">
+                <h2>Dúvidas Frequentes</h2>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">Posso alugar uma moto com nome no SPC/Serasa? <span class="arrow">▼</span></h3>
+                    <p class="faq-answer">Sim, você pode alugar. Aqui não tem consulta, fique tranquilo.</p>
+                </div>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">Como faço para alugar uma moto? <span class="arrow">▼</span></h3>
+                    <ul class="faq-answer">
+                        <li>Escolha o plano de aluguel que você gostou.</li>
+                        <li>Clique em Cadastro/Reserva e preencha o formulário.</li>
+                        <li>Em breve alguém vai te chamar no WhatsApp, e caso tenha alguma dúvida, pode nos chamar também pelo WhatsApp.</li>
+                    </ul>
+                </div>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">Quem paga a manutenção da moto? <span class="arrow">▼</span></h3>
+                    <p class="faq-answer">Fique tranquilo, toda a manutenção, desgaste natural é por nossa conta. Rode o quanto quiser, você paga apenas a troca de óleo e filtro.</p>
+                </div>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">Como funciona o plano MINHA MOTO? <span class="arrow">▼</span></h3>
+                    <p class="faq-answer">Neste plano, você faz uma locação da moto por 26 meses com pagamento semanal. Ao término e conclusão do contrato de 26 a 28 meses, a moto é sua. (O valor da transferência fica por conta do cliente).</p>
+                </div>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">Tem algum limite até onde posso andar com a moto? <span class="arrow">▼</span></h3>
+                    <p class="faq-answer">Temos uma área de circulação definida para garantir que você esteja sempre coberto pelos nossos serviços. Essa área é específica para cada região, normalmente temos um raio de até 50km da base onde retirou a moto. Mas não se preocupe, se precisar ir mais longe, poderá adicionar um raio de até 200km. Lembrando que a quilometragem é ilimitada dentro do raio de abrangência.</p>
+                </div>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">Qual valor preciso para retirar a moto? <span class="arrow">▼</span></h3>
+                    <p class="faq-answer">Para retirada da moto, você precisa pagar a primeira semana de aluguel e mais o Caução. Lembrando que o caução pode ser feito em 2x no boleto semanal ou até 12x no cartão.</p>
+                </div>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">O que é caução e para que serve? <span class="arrow">▼</span></h3>
+                    <p class="faq-answer">É um valor a partir de R$ 500,00 conforme o plano escolhido, que você paga ao retirar a moto. Esse valor fica reservado conosco e só é utilizado em caso de multas ou danos por mau uso da moto. Caso não haja a necessidade de utilizá-lo, você receberá o valor total de volta.</p>
+                </div>
+            
+                <div class="faq-item">
+                    <h3 class="faq-question">Em casos de acidente, roubo ou se a moto for apreendida? <span class="arrow">▼</span></h3>
+                    <p class="faq-answer">Em casos de acidente, roubo ou apreensão da moto, entre imediatamente em contato com nosso canal de suporte pelo WhatsApp. Nestas situações, poderá ser cobrada uma taxa de coparticipação pelo acionamento da proteção (seguro). Consulte as taxas no contrato de locação. Uma moto reserva poderá ser disponibilizada mediante análise do ocorrido.</p>
+                </div>
+            
+            </section>
+                  
+
+<!-- Botão de WhatsApp no final do body -->
+<div id="whatsapp-button">
+    <a href="https://wa.me/5519987363747" target="_blank">
+        <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="WhatsApp">
+    </a>
+</div>
+
+
+
+            
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 AlugaJá - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
